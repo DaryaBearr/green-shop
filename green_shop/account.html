@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Личный кабинет «Зелёный дом»: профиль, история заказов, бонусные баллы и настройки уведомлений.">
+    <title>Личный кабинет — Зелёный дом</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <div class="topbar">
+        <div class="container topbar__inner">
+            <span class="topbar__note">Бесплатная доставка по Ростову-на-Дону от 5 000 ₽</span>
+            <div class="topbar__links">
+                <a href="tel:+78631234567">+7 (863) 123-45-67</a>
+                <span class="topbar__hours">Пн–Сб 10:00–20:00</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html" aria-label="Зелёный дом — на главную">
+                <span class="brand__mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c-9 0-14 4.5-14 11a5 5 0 0 0 5 5c6.5 0 9-5 9-16Z"/><path d="M4 21c2-6 6-9 10-11"/></svg>
+                </span>
+                <span>
+                    <span class="brand__text">Зелёный <em>дом</em></span>
+                    <span class="brand__tagline">растения с характером</span>
+                </span>
+            </a>
+            <nav class="main-nav" aria-label="Основная навигация">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a class="active" href="account.html" aria-current="page">Личный кабинет</a></li>
+                    <li><a href="cart.html">Корзина</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="cart.html" class="cart-link" aria-label="Корзина, 3 товара">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 10.4a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 7H6"/><circle cx="10" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
+                    <span class="cart-link__text">Корзина</span>
+                    <span class="cart-count">3</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <section class="account-hero" aria-labelledby="account-title">
+            <div class="container">
+                <div class="account-user">
+                    <span class="avatar" aria-hidden="true">ИК</span>
+                    <div>
+                        <h1 id="account-title">Личный кабинет</h1>
+                        <p>Добро пожаловать, Иван!</p>
+                        <span class="badge-level">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8L12 2Z"/></svg>
+                            Серебряный уровень · 1 240 баллов
+                        </span>
+                    </div>
+                </div>
+                <a href="index.html" class="btn-ghost">Выйти</a>
+            </div>
+        </section>
+        <nav class="tabs" aria-label="Разделы личного кабинета">
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="#profile">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6.5 8-6.5s8 2.5 8 6.5"/></svg>
+                            Профиль
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#orders">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3z"/><path d="M3 7l2-3h14l2 3M9 12h6"/></svg>
+                            Мои заказы
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#bonuses">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6-4.5-4.2 6.1-.7L12 3Z"/></svg>
+                            Бонусы
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#settings">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>
+                            Настройки
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="account-section" id="profile" aria-labelledby="profile-title">
+            <div class="container">
+                <div class="account-section__head">
+                    <h2 id="profile-title">Мой профиль</h2>
+                    <p>Эти данные мы используем для доставки и связи по заказам. Их можно изменить в любой момент.</p>
+                </div>
+                <div class="account-grid">
+                    <div class="panel">
+                        <h3>Личные данные</h3>
+                        <form action="#" method="post">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="acc-name">Имя</label>
+                                    <input class="form-control" id="acc-name" name="name" type="text" value="Иван" autocomplete="given-name">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="acc-email">Email</label>
+                                    <input class="form-control" id="acc-email" name="email" type="email" value="ivan.petrov@example.ru" autocomplete="email">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="acc-phone">Телефон</label>
+                                    <input class="form-control" id="acc-phone" name="phone" type="tel" value="+7 (916) 555-12-34" autocomplete="tel">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="acc-birth">Дата рождения</label>
+                                    <input class="form-control" id="acc-birth" name="birthdate" type="date" value="1990-04-17">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="acc-address">Адрес доставки по умолчанию</label>
+                                    <input class="form-control" id="acc-address" name="address" type="text" value="Ростов-на-Дону, ул. Пушкинская, 8, кв. 24" autocomplete="street-address">
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn">Сохранить изменения</button>
+                                <span class="form-note">Поля со значком * обязательны к заполнению</span>
+                            </div>
+                        </form>
+                    </div>
+                    <aside class="bonus-card" aria-labelledby="bonus-card-title">
+                        <span class="bonus-card__label" id="bonus-card-title">Бонусный счёт</span>
+                        <span class="bonus-card__value">1 240 <small>баллов</small></span>
+                        <span class="bonus-card__level">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8L12 2Z"/></svg>
+                            Серебряный уровень
+                        </span>
+                        <div class="meter" role="progressbar" aria-label="Прогресс до золотого уровня" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100">
+                            <span class="meter__fill"></span>
+                        </div>
+                        <div class="meter-labels">
+                            <span>1 240 баллов</span>
+                            <span>2 000 баллов</span>
+                        </div>
+                        <p>До золотого уровня осталось 760 баллов. 1 балл = 1 ₽ при оплате следующего заказа.</p>
+                        <a href="#bonuses" class="btn-secondary btn-sm">Как получить баллы</a>
+                    </aside>
+                </div>
+            </div>
+        </section>
+        <section class="account-section" id="orders" aria-labelledby="orders-title">
+            <div class="container">
+                <div class="account-section__head">
+                    <h2 id="orders-title">История заказов</h2>
+                    <p>Все покупки за последние 12 месяцев. Статус обновляется автоматически, а трек-номер приходит в SMS.</p>
+                </div>
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <caption>Заказы за период с августа 2025 по октябрь 2026 года.</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">№ заказа</th>
+                                <th scope="col">Дата</th>
+                                <th scope="col">Сумма</th>
+                                <th scope="col">Статус</th>
+                                <th scope="col">Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">№ 4821</th>
+                                <td>12.10.2026</td>
+                                <td>3 600 ₽</td>
+                                <td><span class="status status--ok">Доставлен</span></td>
+                                <td class="table-actions"><a href="cart.html">Повторить заказ</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">№ 4795</th>
+                                <td>28.09.2026</td>
+                                <td>2 300 ₽</td>
+                                <td><span class="status status--ok">Доставлен</span></td>
+                                <td class="table-actions"><a href="cart.html">Повторить заказ</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">№ 4770</th>
+                                <td>14.09.2026</td>
+                                <td>4 850 ₽</td>
+                                <td><span class="status status--transit">В пути</span></td>
+                                <td class="table-actions"><a href="#orders">Отследить</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">№ 4752</th>
+                                <td>02.09.2026</td>
+                                <td>1 200 ₽</td>
+                                <td><span class="status status--wait">Обрабатывается</span></td>
+                                <td class="table-actions"><a href="#orders">Детали</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">№ 4701</th>
+                                <td>18.08.2026</td>
+                                <td>6 300 ₽</td>
+                                <td><span class="status status--ok">Доставлен</span></td>
+                                <td class="table-actions"><a href="cart.html">Повторить заказ</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">№ 4688</th>
+                                <td>05.08.2026</td>
+                                <td>900 ₽</td>
+                                <td><span class="status status--cancel">Отменён</span></td>
+                                <td class="table-actions"><a href="#orders">Детали</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="section-actions">
+                    <a href="#orders" class="btn-secondary">Показать ещё заказы</a>
+                </div>
+                <p class="table-footnote">Заказ № 4770 уже передан курьеру: ожидайте звонок за час до доставки.</p>
+            </div>
+        </section>
+        <section class="account-section" id="bonuses" aria-labelledby="bonuses-title">
+            <div class="container">
+                <div class="account-section__head">
+                    <h2 id="bonuses-title">Мои бонусы</h2>
+                    <p>Баллы начисляются за покупки и отзывы, а тратить их можно как скидку до 30% от суммы заказа.</p>
+                </div>
+                <div class="bonus-tiles">
+                    <article class="bonus-tile">
+                        <div class="bonus-tile__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6-4.5-4.2 6.1-.7L12 3Z"/></svg>
+                        </div>
+                        <h3>Накоплено баллов</h3>
+                        <span class="value">1 240</span>
+                        <p>Доступно к списанию прямо сейчас</p>
+                    </article>
+                    <article class="bonus-tile">
+                        <div class="bonus-tile__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+                        </div>
+                        <h3>Уровень</h3>
+                        <span class="value">Серебряный</span>
+                        <p>Скидка 5% на все растения и бесплатная доставка от 3 000 ₽</p>
+                    </article>
+                    <article class="bonus-tile">
+                        <div class="bonus-tile__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 7 4-14 3 7h4"/></svg>
+                        </div>
+                        <h3>До следующего уровня</h3>
+                        <span class="value">760 <small>баллов</small></span>
+                        <div class="meter meter--dark" role="progressbar" aria-label="Прогресс до золотого уровня" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100">
+                            <span class="meter__fill"></span>
+                        </div>
+                        <div class="meter-labels">
+                            <span>1 240</span>
+                            <span>2 000</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="bonus-list-card">
+                    <div>
+                        <h3>Как получить баллы</h3>
+                        <ul>
+                            <li><strong>5% от суммы заказа</strong> — начисляем автоматически после доставки.</li>
+                            <li><strong>+200 баллов за отзыв</strong> с фотографией растения.</li>
+                            <li><strong>+500 баллов за друга</strong> — пришлите его первый заказ, и баллы ваши.</li>
+                            <li><strong>+100 баллов в день рождения</strong> — за неделю до праздника.</li>
+                        </ul>
+                    </div>
+                    <div class="bonus-callout">
+                        <strong>Промокод «ЗЕЛЁНЫЙ100»</strong>
+                        Даёт 100 приветственных баллов на первый заказ. Введите его в корзине в поле «Промокод».
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="account-section" id="settings" aria-labelledby="settings-title">
+            <div class="container">
+                <div class="account-section__head">
+                    <h2 id="settings-title">Настройки</h2>
+                    <p>Выберите, как нам с вами общаться и каким способом оплачивать заказы по умолчанию.</p>
+                </div>
+                <div class="panel">
+                    <form action="#" method="post">
+                        <div class="settings-block">
+                            <h3>Уведомления</h3>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="set-news" name="newsletter" checked>
+                                <label class="form-check-label" for="set-news">Получать рассылку о новинках и скидках</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="set-sms" name="sms" checked>
+                                <label class="form-check-label" for="set-sms">СМС-уведомления о статусе заказа</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="set-recommendations" name="recommendations">
+                                <label class="form-check-label" for="set-recommendations">Персональные рекомендации растений</label>
+                            </div>
+                        </div>
+                        <div class="settings-block">
+                            <h3>Способ оплаты по умолчанию</h3>
+                            <div class="payment-options">
+                                <label class="payment-option">
+                                    <input type="radio" name="default-payment" value="card" checked>
+                                    Картой онлайн
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="default-payment" value="cash">
+                                    При получении
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="default-payment" value="bonus">
+                                    Бонусами
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn">Сохранить настройки</button>
+                            <span class="form-note">Отписаться от рассылки можно в один клик в любом письме</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="danger-zone">
+                    <div class="danger-zone__text">
+                        <h3>Опасная зона</h3>
+                        <p>Удаление аккаунта необратимо: история заказов, адреса и бонусные баллы будут потеряны.</p>
+                    </div>
+                    <button type="button" class="btn btn-danger">Удалить аккаунт</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="brand" href="index.html" aria-label="Зелёный дом — на главную">
+                        <span class="brand__mark" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c-9 0-14 4.5-14 11a5 5 0 0 0 5 5c6.5 0 9-5 9-16Z"/><path d="M4 21c2-6 6-9 10-11"/></svg>
+                        </span>
+                        <span class="brand__text">Зелёный <em>дом</em></span>
+                    </a>
+                    <p>Комнатные растения с доставкой по Ростову-на-Дону и всей России.</p>
+                    <div class="socials">
+                        <a href="https://vk.com" target="_blank" rel="noopener" aria-label="ВКонтакте">VK</a>
+                        <a href="https://t.me" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Магазин</h3>
+                    <ul class="footer-list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="account.html">Личный кабинет</a></li>
+                        <li><a href="cart.html">Корзина</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Покупателям</h3>
+                    <ul class="footer-list">
+                        <li><a href="index.html#about">О нас</a></li>
+                        <li><a href="index.html#contacts">Контакты</a></li>
+                        <li><a href="cart.html#delivery">Доставка и оплата</a></li>
+                        <li><a href="cart.html#faq">Частые вопросы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-col--contacts">
+                    <h3>Контакты</h3>
+                    <div class="footer-contacts">
+                        <address>Ростов-на-Дону, ул. Пушкинская, 12<br>5 минут от Театральной площади</address>
+                        <a href="tel:+78631234567">+7 (863) 123-45-67</a>
+                        <a href="mailto:hello@zelenydom.ru">hello@zelenydom.ru</a>
+                        <span>Пн–Сб 10:00–20:00, Вс 11:00–18:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 «Зелёный дом». Все права защищены.</p>
+                <p>Сделано с любовью к растениям 🌿</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
